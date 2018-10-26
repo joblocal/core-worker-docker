@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+PHPFPM_CONF="/etc/php/7.0/fpm/php-fpm.conf"
+PHP_INI="/etc/php/7.0/fpm/php.ini"
+if [[ $V3_ENV = 'development' ]]; then
+	phpenmod xdebug
+	PHP_INI="/etc/php/7.0/fpm/php-dev.ini"
+fi
+
+echo "Running PHP-FPM with configuration : $PHPFPM_CONF $PHP_INI"
+/usr/sbin/php-fpm7.0 -c $PHP_INI -y $PHPFPM_CONF
