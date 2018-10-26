@@ -10,4 +10,4 @@ The image is based on the [Joblocal Core Docker Image](https://github.com/jobloc
 
 ## Images
 
-Find all versions at the repositories [Docker Hub](https://hub.docker.com/r/joblocal/core-worker-docker/)
+Find all versions at the repositories [Docker Hub](https://hub.docker.com/r/joblocal/core-worker/)
